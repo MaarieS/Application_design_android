@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailActivity">
+
+    <!-- Back button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="76dp"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Image watch -->
+    <ImageView
+        android:id="@+id/watchImageView"
+        android:layout_width="311dp"
+        android:layout_height="311dp"
+        android:src="@drawable/watch1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.6"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <!-- CardView for the details of the watch -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/WatchCard"
+        android:layout_width="400dp"
+        android:layout_height="391dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33.5dp"
+            android:layout_marginStart="330dp"
+            android:text="$799"
+            android:textColor="#5B41FF"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <!-- Product Title -->
+        <LinearLayout
+            android:layout_width="335dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="229dp"
+                android:layout_height="wrap_content"
+                android:text="Apple Watch Series 7"
+                android:textColor="#1B153D"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/productDescription1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(With solo loop)"
+                android:textColor="#9095A6"
+                android:textSize="12sp"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/productDescription2"
+            android:layout_width="307dp"
+            android:layout_height="66dp"
+            android:text="The aluminium case is lightweight and made from 100 percent recycled aerospace grade alloy."
+            android:textColor="#9095A6"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="89dp"
+            android:lineSpacingExtra="6dp"/>
+
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="335dp"
+            android:layout_height="71dp"
+            android:text="Add to cart"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/raleway"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:backgroundTint="@color/button"
+            app:layout_constraintTop_toBottomOf="@id/WatchCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="298dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/rounded_background"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
